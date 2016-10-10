@@ -6,5 +6,10 @@ describe('removeAllVowels Filter', function () {
 	beforeEach(inject(function ($injector) {
 		$filter = $injector.get('$filter');
 	}));
+	it('should remove all vowels', function () {
+		var results = $filter('removeAllVowels')('pranecingout');
+
+		expect(results).toEqual('prncngt');
+	});
 
 });
